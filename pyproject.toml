@@ -1,3 +1,75 @@
 [build-system]
-requires = ["setuptools", "wheel"]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
 
+[project]
+name = "fastplotlib"
+authors = [
+    { name = "Kushal Kolar" },
+    { name = "Caitlin Lewis" },
+]
+description = "A fast plotting library built using the pygfx render engine"
+readme = { file = "README.md", content-type = "text/markdown" }
+requires-python = ">=3.9"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+urls = { Repository = "https://github.com/nel-lab/mesmerize-core" }
+dynamic = ["version"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Visualization",
+    "Intended Audience :: Science/Research",
+]
+
+dependencies = [
+    "numpy>=1.23.0",
+    "pygfx>=0.1.14",
+]
+
+
+[project.optional-dependencies]
+docs = [
+    "sphinx",
+    "furo",
+    "glfw",
+    "jupyter-rfb>=0.4.1",  # required so ImageWidget docs show up
+    "ipywidgets>=8.0.0,<9",
+    "sphinx-copybutton",
+    "sphinx-design",
+    "nbsphinx",
+    "pandoc",
+    "jupyterlab",
+    "sidecar"
+]
+
+notebook = [
+    "jupyterlab",
+    "jupyter-rfb>=0.4.1",
+    "ipywidgets>=8.0.0,<9",
+    "sidecar"
+]
+
+tests = [
+    "pytest",
+    "nbmake",
+    "scipy",
+    "imageio[pyav]",
+    "jupyterlab",
+    "jupyter-rfb>=0.4.1",
+    "ipywidgets>=8.0.0,<9",
+    "scikit-learn",
+    "tqdm",
+    "sidecar"
+]
+
+tests-desktop = [
+    "pytest",
+    "scipy",
+    "imageio",
+    "scikit-learn",
+    "tqdm",
+]
+
+
+[tool.setuptools.dynamic]
+version = { file = "fastplotlib/VERSION" }

@@ -5,12 +5,11 @@ version = "0.1.0.a17" # see: https://github.com/prefix-dev/pixi/issues/2946
 name = "pixi-build-python"
 version = "0.4.*"
 
+[package.build.config]
+ignore-pypi-mapping = false
+
 [package.host-dependencies]
 uv = "*"
-
-[package.run-dependencies]
-numpy = ">=1.23.0"
-pygfx = ">=0.1.14"
 
 [workspace]
 preview = ["pixi-build"]
