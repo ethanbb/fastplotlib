@@ -11,3 +11,7 @@ uv = "*"
 [package.run-dependencies]
 numpy = ">=1.23.0"
 pygfx = ">=0.1.14"
+
+[workspace]
+preview = ["pixi-build"]
+channels = ["conda-forge"]
