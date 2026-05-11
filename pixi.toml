@@ -11,6 +11,9 @@ ignore-pypi-mapping = false
 [package.host-dependencies]
 uv = "*"
 
+[package.run-dependencies]
+setuptools = "<82.0.0"  # needed because pkg_resources is used
+
 [workspace]
 preview = ["pixi-build"]
 channels = ["conda-forge"]
