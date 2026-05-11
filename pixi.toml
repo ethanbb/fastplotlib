@@ -10,6 +10,7 @@ ignore-pypi-mapping = false
 
 [package.host-dependencies]
 uv = "*"
+setuptools = "<82.0.0"
 
 [package.run-dependencies]
 setuptools = "<82.0.0"  # needed because pkg_resources is used
