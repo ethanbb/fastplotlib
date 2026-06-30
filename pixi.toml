@@ -13,7 +13,7 @@ extra-args = ["-Ceditable_mode=compat"]
 uv = "*"
 
 [package.run-dependencies]
-setuptools = "<82.0.0"  # needed because pkg_resources is used
+setuptools = "<81.0.0"  # needed because pkg_resources is used
 
 [workspace]
 preview = ["pixi-build"]
